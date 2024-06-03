@@ -1,3 +1,7 @@
+let firstNumber;
+let operator;
+let secondNumber;
+
 const add = (num1, num2) => {
     let sum = num1 + num2;
     console.log(sum);
@@ -16,4 +20,8 @@ const multiply = (num1, num2) => {
 const divide = (num1, num2) => {
     let quotient = num1 / num2;
     console.log(quotient);
+}
+
+const operate = (operator, firstOperand, secondOperand, callback) = {
+    
 }
