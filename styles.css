@@ -13,8 +13,8 @@ body {
 
 #calculator {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: center;
+    align-items: center;*/
     height: 500px;
     width: 370px;
     border: 2px solid purple;
@@ -26,9 +26,10 @@ body {
     flex-direction: column;
     /*justify-content: center;
     align-items: center;*/
-    width: 75%;
-    height: 85%;
+    /*width: 75%;
+    height: 85%;*/
     border: 2px solid red;
+    margin: 5px;
 }
 
 #display {
@@ -39,12 +40,17 @@ body {
 
 #button-container {
     display: flex;
+    height: 65%;
     flex-wrap: wrap;
-    
+    align-content: stretch;
 }
 
 .button {
     flex-grow: 1;
     padding: 20px;
     flex-basis: 25%;
+}
+
+#zero {
+    flex-grow: 2;
 }
