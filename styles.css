@@ -45,6 +45,20 @@ body {
 
 .button {
     flex-grow: 1;
+    flex-basis: 25%;
+    border: 0.25px solid white;
+    border-radius: 0;
+}
+.clear {
+    flex-basis: 50%;
+}
+
+.backspace {
+    flex-basis: 25%;
+}
+
+.number, .decimal {
+    flex-grow: 1;
     /*padding: 20px;*/
     flex-basis: 25%;
     background-color: rgb(50, 50, 50);
@@ -53,6 +67,35 @@ body {
     color: #F8F8FF;
 }
 
+.operator {
+    flex-grow: 1;
+    /*padding: 20px;*/
+    flex-basis: 25%;
+    border: 0.25px solid white;
+    border-radius: 0;
+}
+
+.operator, .clear, .backspace {
+    background-color: rgb(64, 19, 127);
+    color: #F8F8FF;
+}
+
 #zero {
     flex-basis: 50%;
+}
+
+.number:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+.number:active {
+    background-color: rgb(79, 61, 81);
+}
+
+.operator:hover, .clear:hover, .backspace:hover {
+    background-color: rgb(94, 57, 101);
+}
+
+.operator:active, .clear:active, .backspace:active {
+    background-color: rgb(64, 19, 100);
 }
