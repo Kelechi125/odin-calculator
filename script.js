@@ -25,6 +25,20 @@ const divide = (num1, num2) => {
     return quotient;
 }
 
+//
+
+const operate = (operator, firstOperand, secondOperand) => {
+    if (operator === "+") {
+        return add(firstOperand, secondOperand);
+    } else if (operator === "-") {
+        return subtract(firstOperand, secondOperand);
+    } else if (operator === "x") {
+        return multiply(firstOperand, secondOperand);
+    } else if (operator === "/") {
+        return divide(firstOperand, secondOperand);
+    }
+}
+
 // When a number is pressed, it appears in the display
 // Each consecutive number attaches to the previous number in the display (concatenation)
 // When an operator is pressed, assign the #display.textContent to firstOperand
@@ -33,7 +47,5 @@ const divide = (num1, num2) => {
 // Clear the display
 // The number appears in the display again and consecutive numbers concatenate
 
-
-const operate = (operator, firstOperand, secondOperand, callback) = {
-    if
-}
+let numberButtons = document.querySelectorAll(".number");
+console.log(numberButtons);
