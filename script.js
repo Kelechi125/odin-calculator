@@ -47,5 +47,22 @@ const operate = (operator, firstOperand, secondOperand) => {
 // Clear the display
 // The number appears in the display again and consecutive numbers concatenate
 
-let numberButtons = document.querySelectorAll(".number");
-console.log(numberButtons);
+/*let numbers = document.querySelectorAll(".number");
+console.log(numbers);
+
+numbers.forEach(num => {
+    num.addEventListener("click", (event) => {
+        
+    })
+})*/
+
+const btnContainer = document.querySelector("#button-container");
+
+btnContainer.addEventListener("click", event => {
+    let target = event.target;
+
+    if (target.className = "number") {
+        console.log(target.value);
+    }
+})
+
