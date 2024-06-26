@@ -62,7 +62,19 @@ btnContainer.addEventListener("click", event => {
     }
 
     if (target.classList.contains("number")) {
-        display.textContent = parseInt(display.textContent) + target.value;
+        
+        // If the display value is "0"
+        // Change the value to the number that is pressed
+        if (display.textContent === "0") {  
+            display.textContent = target.value;
+
+            // If the display value is anything other than 0
+            // Append the number pressed to the display value
+        } else if (display.textContent !== "0") {
+            display.textContent += target.value;
+        }
+        //display.textContent = parseInt(display.textContent) + target.value;
+        console.log(display.textContent);
     }
 })
 
