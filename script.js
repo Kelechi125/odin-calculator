@@ -47,22 +47,22 @@ const operate = (operator, firstOperand, secondOperand) => {
 // Clear the display
 // The number appears in the display again and consecutive numbers concatenate
 
-/*let numbers = document.querySelectorAll(".number");
-console.log(numbers);
-
-numbers.forEach(num => {
-    num.addEventListener("click", (event) => {
-        
-    })
-})*/
-
+// Added event listeners to buttons using event delegation on #button-container
 const btnContainer = document.querySelector("#button-container");
+const display = document.querySelector("#display");
+
+console.log(typeof display.textContent);
 
 btnContainer.addEventListener("click", event => {
     let target = event.target;
 
-    if (target.className = "number") {
-        console.log(target.value);
+    //console.log(target.value);
+    if (target.classList.contains("clear")) {
+        display.textContent = 0;
+    }
+
+    if (target.classList.contains("number")) {
+        display.textContent = parseInt(display.textContent) + target.value;
     }
 })
 
