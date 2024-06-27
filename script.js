@@ -48,12 +48,12 @@ const operate = (operator, firstOperand, secondOperand) => {
 // The number appears in the display again and consecutive numbers concatenate
 
 // Added event listeners to buttons using event delegation on #button-container
-const btnContainer = document.querySelector("#button-container");
+//const btnContainer = document.querySelector("#button-container");
 const display = document.querySelector("#display");
 
 console.log(typeof display.textContent);
 
-btnContainer.addEventListener("click", event => {
+/*btnContainer.addEventListener("click", event => {
     let target = event.target;
 
     //console.log(target.value);
@@ -80,6 +80,46 @@ btnContainer.addEventListener("click", event => {
         }
         //display.textContent = parseInt(display.textContent) + target.value;
         console.log(display.textContent);
+    } else if (target.classList.contains("operator")) {
+        firstNumber = parseFloat(display.textContent);
+        console.log(typeof firstNumber);
     }
+})*/
+
+const clearBtn = document.querySelector(".clear");
+const decimalBtn = document.querySelector(".decimal");
+const numberBtns = document.querySelectorAll(".number");
+
+clearBtn.addEventListener("click", () => {
+    display.textContent = 0;
 })
+
+decimalBtn.addEventListener("click", (event) => {
+    let target = event.target;
+    // Check to see if the display value already includes a decimal
+    if (display.textContent.includes(".") === false)
+
+        // Appends a decimal to the display value
+        display.textContent += target.value;
+})
+
+for (btn of numberBtns) {
+    btn.addEventListener("click", (event) => {
+        let target = event.target;
+        // If the display value is "0"
+        // Change the value to the number that is pressed
+        if (display.textContent === "0") {  
+            display.textContent = target.value;
+
+            // If the display value is anything other than 0
+            // Append the number pressed to the display value
+        } else if (display.textContent !== "0") {
+            display.textContent += target.value;
+        }
+        //display.textContent = parseInt(display.textContent) + target.value;
+        console.log(display.textContent);
+    })
+}
+
+
 
