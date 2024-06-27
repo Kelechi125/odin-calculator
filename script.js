@@ -59,9 +59,14 @@ btnContainer.addEventListener("click", event => {
     //console.log(target.value);
     if (target.classList.contains("clear")) {
         display.textContent = 0;
-    }
+    } else if (target.classList.contains("decimal")) {
 
-    if (target.classList.contains("number")) {
+        // Check to see if the display value already includes a decimal
+        if (display.textContent.includes(".") === false)
+
+        // Appends a decimal to the display value
+        display.textContent += target.value;
+    } else if (target.classList.contains("number")) {
         
         // If the display value is "0"
         // Change the value to the number that is pressed
